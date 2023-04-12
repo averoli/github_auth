@@ -16,7 +16,10 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     trim: true,
-  }
+  },
+  starredRepositories: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "Repository" },
+  ],
 });
 
-module.exports =  mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User", UserSchema);
