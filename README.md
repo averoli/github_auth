@@ -1,13 +1,19 @@
-### GitHub Social Login 
+# GitHub Social Login 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/averoli/github_auth/badge)](https://www.codefactor.io/repository/github/averoli/github_auth>)
 
 This is a Node.js application that allows users to authenticate with GitHub and store their access token and profile information in a database. The application uses Passport.js for authentication and MongoDB for data storage. It also includes endpoints for displaying all registered users, giving "star" to a repository, and protecting routes that require authentication.
 
-## Getting Started
+## Installation
+Clone this repository to your local machine.
+
+ ```sh
+ npm clone https://github.com/nuwe-io/readme-templates
+ ```
+   
 To run the application, follow these steps:
 
-Clone this repository to your local machine.
+
 _To install all dependencies run the following commands._
 ```
 
