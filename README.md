@@ -1,11 +1,40 @@
-###GitHub Social Login 
+### GitHub Social Login 
 
 [![CodeFactor](https://www.codefactor.io/repository/github/averoli/github_auth/badge)](https://www.codefactor.io/repository/github/averoli/github_auth>)
 
 This is a Node.js application that allows users to authenticate with GitHub and store their access token and profile information in a database. The application uses Passport.js for authentication and MongoDB for data storage. It also includes endpoints for displaying all registered users, giving "star" to a repository, and protecting routes that require authentication.
 
-Getting Started
+## Getting Started
 To run the application, follow these steps:
+
+Clone this repository to your local machine.
+_To install all dependencies run the following commands._
+```
+
+* cd
+  ```sh
+  cd astro-sound/server
+  ```
+
+* npm
+  ```sh
+  npm install
+  ```
+
+### RUN
+To run this application you will need a firebase account and have all its configurations done with your data.
+
+* Client Script
+  ```sh
+  npm run start
+  ```
+
+* Server Script
+  ```sh
+  npm run server
+  ```
+
+  Your browser should automatically open the app.
 
 Clone this repository to your local machine.
 Install the dependencies by running npm install in the project directory.
