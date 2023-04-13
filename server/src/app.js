@@ -19,21 +19,6 @@ connect();
 app.use("/", userRouter);
 app.use("/auth", authRoutes);
 
-// Deserialize user from session
-passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
-    done(err, user);
-  });
-});
-
-// !MIDDLEWARE FOR PROTECTING ROUTES
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  res.redirect("/login");
-}
-
 
 //!START SERVER
 app.listen(process.env.PORT, () => {

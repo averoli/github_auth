@@ -12,28 +12,9 @@ router.get("/users", async function (req, res) {
     res.json(users);
   } catch (error) {
     console.error(error);
-    res.status(500).send("Internal server error");
+    res.status(500).send("Error");
   }
 });
 
-router.post("/repositories/:id/star", async function (req, res) {
-  try {
-    const { id } = req.params;
-    const { userId } = req.body;
 
-    const user = await User.findById(userId);
-
-    if (!user) {
-      return res.status(404).send("User not found");
-    }
-
-    user.starredRepositories.push(id);
-    await user.save();
-
-    res.send("Repository starred");
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Server error");
-  }
-});
 module.exports = router;
